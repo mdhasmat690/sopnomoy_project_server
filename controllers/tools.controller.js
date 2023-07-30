@@ -683,32 +683,4 @@ module.exports.getSingleCollectionItem = async (req, res, next) => {
     next(error);
   }
 };
-
-/* 
-module.exports.getUserDetail = async (req, res, next) => {
-  try {
-    const db = getDb();
-    const { id } = req.params;
-
-    if (!ObjectId.isValid(id)) {
-      return res
-        .status(400)
-        .json({ success: false, error: "Not a valid tool id." });
-    }
-
-    const tool = await db
-      .collection("users")
-      .findOne({ _id: new ObjectId(id) });
-
-    if (!tool) {
-      return res
-        .status(400)
-        .json({ success: false, error: "Couldn't find a tool with this id" });
-    }
-
-    res.status(200).json({ success: true, data: tool });
-  } catch (error) {
-    next(error);
-  }
-};
- */
+/* k */
