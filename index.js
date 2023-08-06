@@ -11,12 +11,13 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
 
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
-);
+app.use(cors());
+// app.use(
+//   cors({
+//     origin: "http://localhost:3000",
+//     credentials: true,
+//   })
+// );
 app.use(express.json());
 app.use(express.static("public"));
 
