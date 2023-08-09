@@ -7,30 +7,6 @@ const jobControllers = require("../controllers/jobBox.controller");
 
 const router = express.Router();
 
-/* job */
-router
-  .route("/job/post")
-  .post(jobControllers.jobPost)
-  .get(jobControllers.getjob)
-  .delete(jobControllers.deleteSingleJob);
-
-router.route("/job/post/:id").get(jobControllers.getSingleData);
-
-/*  */
-
-/* blog route */
-router
-  .route("/blog/post")
-  .post(blogControllers.createBlog)
-  .get(blogControllers.getBlog);
-
-router
-  .route("/blog/:id")
-  .get(blogControllers.singeBlog)
-  .delete(blogControllers.deleteBlog);
-
-/*  */
-
 /* collection */
 router
   .route("/collection")
@@ -47,22 +23,6 @@ router
 router
   .route("/collections/collection/:id")
   .get(toolsControllers.getSingleCollectionItem);
-
-/* chat controller */
-router
-  .route("/createConverSion")
-  .post(ChatControllers.saveConverSion)
-  .get(ChatControllers.getConversion);
-
-router.route("/createConverSion/:id").patch(ChatControllers.editConverSion);
-
-router.route("/message").post(ChatControllers.saveMessage);
-router.route("/message/:id").get(ChatControllers.getMessage);
-
-router
-  .route("/createConverSions/allConversion")
-  .get(ChatControllers.getConversions);
-/*  */
 
 router
   .route("/postProject")
@@ -84,16 +44,6 @@ router
 router
   .route("/postProject/related/:email")
   .get(toolsControllers.getRelatedTools);
-
-router
-  .route("/users")
-  .post(toolsControllers.saveUser)
-  .put(toolsControllers.updateUser);
-
-router.route("/:id").get(toolsControllers.getUserDetail);
-// .patch(toolsControllers.updateUserMore);
-
-router.route("/update/:id").patch(toolsControllers.updateUserMore);
 
 router.route("/like").post(toolsControllers.likeSave);
 
