@@ -1,9 +1,6 @@
 const express = require("express");
 
 const toolsControllers = require("../controllers/tools.controller");
-const ChatControllers = require("../controllers/chat.controller");
-const blogControllers = require("../controllers/blog.controller");
-const jobControllers = require("../controllers/jobBox.controller");
 
 const router = express.Router();
 
